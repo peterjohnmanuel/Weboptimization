@@ -9,6 +9,7 @@
   "author": "Peter john Manuel",
   "license": "ISC",
   "devDependencies": {
+    "del": "^2.2.0",
     "gulp": "^3.9.1"
   }
 }

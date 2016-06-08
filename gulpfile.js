@@ -1,13 +1,19 @@
 var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     htmlmin = require('gulp-html-minifier'),
-    minifyCSS = require('gulp-clean-css');
+    minifyCSS = require('gulp-clean-css'),
+    del = require('del');
+
+// Delete dist Folder
+gulp.task('delete-dist', function(){
+    return del(['dist']);
+})
 
 // Minify Javascript
 gulp.task('minify-js', function () {
     gulp.src('js/*.js')
     .pipe(uglify())
-    .pipe(gulp.dest('dist/js/')),
+    .pipe(gulp.dest('./dist/js/')),
     gulp.src('views/js/*.js')
     .pipe(uglify())
     .pipe(gulp.dest('./dist/views/js/'))
@@ -20,7 +26,7 @@ gulp.task('minify-html', function () {
     .pipe(gulp.dest('./dist')),
     gulp.src('views/*.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest('./dist/views'))
+    .pipe(gulp.dest('./dist/views/'))
 });
 
 // Minify CSS
@@ -30,4 +36,4 @@ gulp.task('css-minify', function() {
         .pipe(gulp.dest('./dist/css/'))
 });
 
-gulp.task('default', ['minify-js', 'minify-html', 'css-minify']);
+gulp.task('default', ['delete-dist','minify-js', 'minify-html', 'css-minify']);

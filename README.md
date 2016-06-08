@@ -88,12 +88,14 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
 * Installed and configured gulp uglify task.
 * Installed and configured gulp html minify task.
 * Installed and configured gulp css minify task.
+* Installed and configured gulp del task (Delete's old dist files before running task).
 
 ### Gulp Modules Used
 
 * [Gulp Uglify](https://www.npmjs.com/package/gulp-uglify)
 * [Gulp Html Minifier](https://www.npmjs.com/package/gulp-html-minifier)
 * [Gulp Clean CSS](https://www.npmjs.com/package/gulp-clean-css)
+* [Gulp Delete files and folders Github Repository](https://github.com/gulpjs/gulp/blob/master/docs/recipes/delete-files-folder.md)
  
 ### Links Used:
 
