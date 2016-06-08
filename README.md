@@ -77,6 +77,8 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
 ```
 <script async src="http://www.google-analytics.com/analytics.js"></script>
 ```
+
+* Moved css tags to the bottom of the body tag.
   
 ### Links Used:
 
