@@ -87,11 +87,13 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
 * Installed gulp task runner.
 * Installed and configured gulp uglify task.
 * Installed and configured gulp html minify task.
+* Installed and configured gulp css minify task.
 
 ### Gulp Modules Used
 
 * [Gulp Uglify](https://www.npmjs.com/package/gulp-uglify)
 * [Gulp Html Minifier](https://www.npmjs.com/package/gulp-html-minifier)
+* [Gulp Clean CSS](https://www.npmjs.com/package/gulp-clean-css)
  
 ### Links Used:
 

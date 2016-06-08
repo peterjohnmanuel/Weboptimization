@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
-    htmlmin = require('gulp-html-minifier');
+    htmlmin = require('gulp-html-minifier'),
+    minifyCSS = require('gulp-clean-css');
 
 // Minify Javascript
 gulp.task('minify-js', function () {
@@ -22,5 +23,11 @@ gulp.task('minify-html', function () {
     .pipe(gulp.dest('./dist/views'))
 });
 
+// Minify CSS
+gulp.task('css-minify', function() {
+    gulp.src('css/*.css')
+        .pipe(minifyCSS())
+        .pipe(gulp.dest('./dist/css/'))
+});
 
-gulp.task('default', ['minify-js', 'minify-html']);
+gulp.task('default', ['minify-js', 'minify-html', 'css-minify']);
