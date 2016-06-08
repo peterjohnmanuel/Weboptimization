@@ -53,3 +53,20 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
 
 * <a href="http://getbootstrap.com/css/">Bootstrap's CSS Classes</a>
 * <a href="http://getbootstrap.com/components/">Bootstrap's Components</a>
+
+
+
+
+### Changes Done:
+
+#### Index.html
+
+* Changed media query for printing:
+
+```
+  <link href="css/print.css" rel="stylesheet" media="print" type="text/css">
+```
+  
+### Links Used:
+
+* [Using media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
