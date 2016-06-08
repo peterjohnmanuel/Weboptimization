@@ -82,9 +82,14 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
 * Moved javascript tags to the bottom of the body tag.
 
 
-### General Changes
+#### General Changes
 
 * Installed gulp task runner.
+* Installed and configured gulp uglify task.
+
+### Gulp Modules Used
+
+* [Gulp Uglify](https://www.npmjs.com/package/gulp-uglify)
  
 ### Links Used:
 
