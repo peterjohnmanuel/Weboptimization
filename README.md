@@ -66,6 +66,12 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
 ```
   <link href="css/print.css" rel="stylesheet" media="print" type="text/css">
 ```
+
+* Added new css file, seperated media query css and added media query to the link tag:
+```
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/smartphone.css" rel="stylesheet" media="only screen and (max-width: 480px)" type="text/css">
+``` 
   
 ### Links Used:
 
