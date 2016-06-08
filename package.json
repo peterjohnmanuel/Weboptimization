@@ -1,0 +1,11 @@
+{
+  "name": "website_optimization_project",
+  "version": "1.0.0",
+  "description": "Optimization project done as part of udacity front end nano degree.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Peter john Manuel",
+  "license": "ISC"
+}
