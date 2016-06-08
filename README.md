@@ -80,6 +80,11 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
 
 * Moved css tags to the bottom of the body tag.
 * Moved javascript tags to the bottom of the body tag.
+
+
+### General Changes
+
+* Installed gulp task runner.
  
 ### Links Used:
 
