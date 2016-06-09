@@ -89,6 +89,7 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
 * Installed and configured gulp html minify task.
 * Installed and configured gulp css minify task.
 * Installed and configured gulp del task (Delete's old dist files before running task).
+* Installed and configured gulp live reload.
 
 ### Gulp Modules Used
 
@@ -96,7 +97,9 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
 * [Gulp Html Minifier](https://www.npmjs.com/package/gulp-html-minifier)
 * [Gulp Clean CSS](https://www.npmjs.com/package/gulp-clean-css)
 * [Gulp Delete files and folders Github Repository](https://github.com/gulpjs/gulp/blob/master/docs/recipes/delete-files-folder.md)
+* [Gulp Live Reload](https://www.npmjs.com/package/gulp-livereload)
  
 ### Links Used:
 
 * [Using media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+* [Learning Gulp #8 - LiveReload With Gulp](https://www.youtube.com/watch?v=r5fvdIa0ETk)
