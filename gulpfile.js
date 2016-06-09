@@ -3,7 +3,8 @@ var gulp = require('gulp'),
     htmlmin = require('gulp-html-minifier'),
     minifyCSS = require('gulp-clean-css'),
     del = require('del'),
-    livereload = require('gulp-livereload');
+    livereload = require('gulp-livereload'),
+    imageResizer = require('gulp-image-resize');
 
 // Delete dist Folder
 gulp.task('delete-dist', function(){
@@ -42,6 +43,20 @@ gulp.task('minify-css', function() {
         .pipe(livereload());
 });
 
+// Resize Images
+gulp.task('resize-image', function () {
+   gulp.src('views/images/pizzeria.jpg')
+   .pipe(imageResizer({
+       width : 360,
+       height : 270,
+       quality : 50,
+       crop : true,
+       upscale : false,
+       progressive : true
+   }))
+   .pipe(gulp.dest('dist/views/images/'))
+});
+
 // Watch
 gulp.task('watch',function() {
 
@@ -53,4 +68,4 @@ gulp.task('watch',function() {
     
 })
 
-gulp.task('default', ['delete-dist','minify-js', 'minify-html', 'minify-css', 'watch']);
+gulp.task('default', ['delete-dist','minify-js', 'minify-html', 'minify-css', 'resize-image' ,'watch']);
