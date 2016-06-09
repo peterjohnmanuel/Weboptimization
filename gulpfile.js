@@ -4,7 +4,8 @@ var gulp = require('gulp'),
     minifyCSS = require('gulp-clean-css'),
     del = require('del'),
     livereload = require('gulp-livereload'),
-    imageResizer = require('gulp-image-resize');
+    imageResizer = require('gulp-image-resize'),
+    imagemin = require('gulp-imagemin');
 
 // Delete dist Folder
 gulp.task('delete-dist', function(){
@@ -54,8 +55,20 @@ gulp.task('resize-image', function () {
        upscale : false,
        progressive : true
    }))
+   .pipe(imagemin())
    .pipe(gulp.dest('dist/views/images/'))
 });
+
+// Compress Images
+gulp.task('minify-image', function () {
+  gulp.src('img/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('dist/img/')), 
+    gulp.src('views/images/pizza.png')
+      .pipe(imagemin())
+      .pipe(gulp.dest('dist/views/images/'))
+});
+
 
 // Watch
 gulp.task('watch',function() {
@@ -68,4 +81,4 @@ gulp.task('watch',function() {
     
 })
 
-gulp.task('default', ['delete-dist','minify-js', 'minify-html', 'minify-css', 'resize-image' ,'watch']);
+gulp.task('default', ['delete-dist','minify-js', 'minify-html', 'minify-css', 'minify-image' , 'resize-image' ,'watch']);
