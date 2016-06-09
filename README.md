@@ -80,6 +80,7 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
 
 * Moved css tags to the bottom of the body tag.
 * Moved javascript tags to the bottom of the body tag.
+* Compress image to specified width and height on page.
 
 
 #### General Changes
@@ -92,6 +93,7 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
 * Installed and configured gulp live reload.
 * Installed and configured gulp image resize.
 * Installed and configured gulp image minification.
+* Installed and configured gulp rename.
 
 ### Gulp Modules Used
 
@@ -102,6 +104,9 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
 * [Gulp Live Reload](https://www.npmjs.com/package/gulp-livereload)
 * [Gulp Image Resize](https://www.npmjs.com/package/gulp-image-resize)
 * [Gulp Image min](https://www.npmjs.com/package/gulp-imagemin)
+* [Gulp Rename](https://www.npmjs.com/package/gulp-rename)
+
+rename
  
 ### Links Used:
 

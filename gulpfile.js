@@ -5,7 +5,8 @@ var gulp = require('gulp'),
     del = require('del'),
     livereload = require('gulp-livereload'),
     imageResizer = require('gulp-image-resize'),
-    imagemin = require('gulp-imagemin');
+    imagemin = require('gulp-imagemin'),
+    rename = require('gulp-rename');
 
 // Delete dist Folder
 gulp.task('delete-dist', function(){
@@ -56,7 +57,20 @@ gulp.task('resize-image', function () {
        progressive : true
    }))
    .pipe(imagemin())
+   .pipe(gulp.dest('dist/views/images/')),
+   gulp.src('views/images/pizzeria.jpg')
+   .pipe(imageResizer({
+       width : 115,
+       height : 65,
+       quality : 20,
+       crop : true,
+       upscale : false,
+       progressive : true
+   }))
+   .pipe(rename('M-pizzeria.jpg'))
+   .pipe(imagemin())
    .pipe(gulp.dest('dist/views/images/'))
+
 });
 
 // Compress Images
