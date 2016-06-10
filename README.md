@@ -106,7 +106,6 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
 * [Gulp Image min](https://www.npmjs.com/package/gulp-imagemin)
 * [Gulp Rename](https://www.npmjs.com/package/gulp-rename)
 
-rename
  
 ### Links Used:
 

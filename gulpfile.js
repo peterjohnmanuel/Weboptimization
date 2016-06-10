@@ -69,7 +69,19 @@ gulp.task('resize-image', function () {
    }))
    .pipe(rename('M-pizzeria.jpg'))
    .pipe(imagemin())
-   .pipe(gulp.dest('dist/views/images/'))
+   .pipe(gulp.dest('dist/views/images/')),
+      gulp.src('img/mobilewebdev.jpg')
+   .pipe(imageResizer({
+       width : 602,
+       height : 306,
+       quality : 20,
+       crop : true,
+       upscale : false,
+       progressive : true
+   }))
+   .pipe(rename('M-pizzeria.jpg'))
+   .pipe(imagemin())
+   .pipe(gulp.dest('dist/img/'))
 
 });
 
