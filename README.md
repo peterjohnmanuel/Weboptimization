@@ -82,6 +82,10 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
 * Moved javascript tags to the bottom of the body tag.
 * Compress image to specified width and height on page.
 
+#### project-mobile.html
+
+* Compress and minified picture.
+
 
 #### General Changes
 
