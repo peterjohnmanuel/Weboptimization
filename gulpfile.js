@@ -99,7 +99,7 @@ gulp.task('minify-image', function () {
 // Watch
 gulp.task('watch',function() {
 
-    var server = livereload;
+    livereload.listen();
 
     gulp.watch(['js/*.js', 'views/js/*.js'], ['minify-js']);
     gulp.watch(['css/*.css', 'views/css/*.css'], ['minify-css']);
