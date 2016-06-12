@@ -97,6 +97,7 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
 <link href="css/smartphone.css" rel="stylesheet" media="only screen and (max-width: 480px)" type="text/css">
 ``` 
 * Added async attributes to the script tags. 
+* Moved javascript and css tags to the bottom of the body tag.
 
 #### project-mobile.html
 
