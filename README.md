@@ -83,6 +83,20 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
 * Compress image to specified width and height on page.
 * Added defer attribute to all css tags.
 
+#### project-2048.html
+
+* Changed media query for printing:
+
+```
+  <link href="css/print.css" rel="stylesheet" media="print" type="text/css">
+```
+
+* Added new css file, seperated media query css and added media query to the link tag:
+```
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/smartphone.css" rel="stylesheet" media="only screen and (max-width: 480px)" type="text/css">
+``` 
+
 #### project-mobile.html
 
 * Compress and minified picture.
