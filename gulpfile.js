@@ -6,7 +6,8 @@ var gulp = require('gulp'),
     livereload = require('gulp-livereload'),
     imageResizer = require('gulp-image-resize'),
     imagemin = require('gulp-imagemin'),
-    rename = require('gulp-rename');
+    rename = require('gulp-rename'),
+    useref = require('gulp-useref');
 
 // Delete dist Folder
 gulp.task('delete-dist', function(){
@@ -30,11 +31,7 @@ gulp.task('minify-html', function () {
     gulp.src('./*.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('./dist'))
-    .pipe(livereload()),
-    gulp.src('views/*.html')
-    .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest('./dist/views/'))
-    .pipe(livereload());
+    .pipe(livereload())
 });
 
 // Minify CSS
@@ -94,6 +91,16 @@ gulp.task('minify-image', function () {
       .pipe(gulp.dest('dist/views/images/'))
 });
 
+// Concatenate and minify css files and minify pizza html
+gulp.task('useref', function() {
+    gulp.src('views/*.html')
+        .pipe(useref())
+        .pipe(minifyCSS())        
+        .pipe(htmlmin({ collapseWhitespace: true }))
+        .pipe(gulp.dest('dist/views'))
+        .pipe(livereload());
+});
+
 
 // Watch
 gulp.task('watch',function() {
@@ -102,8 +109,9 @@ gulp.task('watch',function() {
 
     gulp.watch(['js/*.js', 'views/js/*.js'], ['minify-js']);
     gulp.watch(['css/*.css', 'views/css/*.css'], ['minify-css']);
-    gulp.watch(['./*.html', 'views/*.html'], ['minify-html']);
+    //gulp.watch(['./*.html'], ['minify-html']);
+    gulp.watch(['views/*.html'], ['useref']);
     
 })
 
-gulp.task('default', ['delete-dist','minify-js', 'minify-html', 'minify-css', 'minify-image' , 'resize-image' ,'watch']);
+gulp.task('default', ['delete-dist','minify-js', 'minify-html', 'minify-css', 'minify-image' , 'resize-image' , 'useref','watch']);

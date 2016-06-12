@@ -132,6 +132,7 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
 * Installed and configured gulp image resize.
 * Installed and configured gulp image minification.
 * Installed and configured gulp rename.
+* Installed and configured gulp useref.
 
 ### Gulp Modules Used
 
@@ -143,6 +144,7 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
 * [Gulp Image Resize](https://www.npmjs.com/package/gulp-image-resize)
 * [Gulp Image min](https://www.npmjs.com/package/gulp-imagemin)
 * [Gulp Rename](https://www.npmjs.com/package/gulp-rename)
+* [Gulp Useref](https://www.npmjs.com/package/gulp-useref)
 
  
 ### Links Used:
