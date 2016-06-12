@@ -102,6 +102,8 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
 #### project-mobile.html
 
 * Compress and minified picture.
+* Added async attributes to the script tags. 
+
 
 
 #### General Changes
