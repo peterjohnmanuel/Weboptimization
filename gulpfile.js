@@ -74,12 +74,11 @@ gulp.task('resize-image', function () {
    .pipe(imageResizer({
        width : 602,
        height : 306,
-       quality : 20,
+       quality : 80,
        crop : true,
        upscale : false,
        progressive : true
-   }))
-   .pipe(rename('M-pizzeria.jpg'))
+   }))   
    .pipe(imagemin())
    .pipe(gulp.dest('dist/img/'))
 
