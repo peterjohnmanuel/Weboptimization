@@ -121,6 +121,21 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
 * Moved css tags to the bottom of the bottom.
 
 
+#### views/js/main.js
+
+* UpdatePositions method optimizations:
+    * Changed to getElementsByClassName
+    * Moved scrolltop to a variable outside of the loop.
+    * Added phase variable.
+    * Added phase loop to populate the 5 phases.
+    * Changed to translateX to enhance performance. 
+
+#### views/css/style.css
+
+* Added backface visibility
+
+
+
 #### General Changes
 
 * Installed gulp task runner.
