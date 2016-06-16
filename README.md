@@ -123,14 +123,22 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
 
 #### views/js/main.js
 
+  * Removed all adjectives from switch statement.
+  * Removed all Nouns from switch statement.
+
 * UpdatePositions method optimizations:
     * Changed to getElementsByClassName
     * Moved scrolltop to a variable outside of the loop.
     * Added phase variable.
     * Added phase loop to populate the 5 phases.
     * Changed to translateX to enhance performance. 
-    * Removed all adjectives from switch statement.
-    * Removed all Nouns from switch statement.
+
+
+* changePizzaSizes method optimizations:
+    * Change: Changed to Get Elements by class name.
+    * Change: Removed dx from loop.
+    * Change: Removed dx from loop.
+    * Change: Removed selector in loop.     
 
 #### views/css/style.css
 
