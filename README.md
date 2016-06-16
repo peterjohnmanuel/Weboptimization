@@ -130,6 +130,7 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
     * Added phase loop to populate the 5 phases.
     * Changed to translateX to enhance performance. 
     * Removed all adjectives from switch statement.
+    * Removed all Nouns from switch statement.
 
 #### views/css/style.css
 
