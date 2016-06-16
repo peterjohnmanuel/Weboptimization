@@ -335,13 +335,18 @@ var ingredientItemizer = function (string) {
   return "<li>" + string + "</li>";
 };
 
+// Change: Cached variables outside of loop in makeRandomPizza.
+  var numberOfMeats = 0;
+  var numberOfNonMeats = 0; 
+  var numberOfCheeses = 0;
+
 // Returns a string with random pizza ingredients nested inside <li> tags
 var makeRandomPizza = function () {
   var pizza = "";
 
-  var numberOfMeats = Math.floor((Math.random() * 4));
-  var numberOfNonMeats = Math.floor((Math.random() * 3));
-  var numberOfCheeses = Math.floor((Math.random() * 2));
+   numberOfMeats = Math.floor((Math.random() * 4));
+   numberOfNonMeats = Math.floor((Math.random() * 3));
+   numberOfCheeses = Math.floor((Math.random() * 2));
 
   for (var i = 0; i < numberOfMeats; i++) {
     pizza = pizza + ingredientItemizer(selectRandomMeat());
@@ -361,14 +366,16 @@ var makeRandomPizza = function () {
   return pizza;
 };
 
+// Change: Cached the pizzaElementGenerator variables outside of a loop. 
+var pizzaContainer,             // contains pizza title, image and list of ingredients
+  pizzaImageContainer,        // contains the pizza image
+  pizzaImage,                 // the pizza image itself
+  pizzaDescriptionContainer,  // contains the pizza title and list of ingredients
+  pizzaName,                  // the pizza name itself
+  ul;                         // the list of ingredients
+
 // returns a DOM element for each pizza
 var pizzaElementGenerator = function (i) {
-  var pizzaContainer,             // contains pizza title, image and list of ingredients
-    pizzaImageContainer,        // contains the pizza image
-    pizzaImage,                 // the pizza image itself
-    pizzaDescriptionContainer,  // contains the pizza title and list of ingredients
-    pizzaName,                  // the pizza name itself
-    ul;                         // the list of ingredients
 
   pizzaContainer = document.createElement("div");
   pizzaImageContainer = document.createElement("div");
@@ -385,8 +392,6 @@ var pizzaElementGenerator = function (i) {
   pizzaImage.classList.add("img-responsive");
   pizzaImageContainer.appendChild(pizzaImage);
   pizzaContainer.appendChild(pizzaImageContainer);
-
-
   pizzaDescriptionContainer.classList.add("col-md-6");
 
   pizzaName = document.createElement("h4");
@@ -478,10 +483,10 @@ var resizePizzas = function (size) {
 };
 
 window.performance.mark("mark_start_generating"); // collect timing data
-
+// Change: Cached variable out of loop that creates and appends the pizza when screen loads.
+var pizzasDiv = document.getElementById("randomPizzas");
 // This for-loop actually creates and appends all of the pizzas when the page loads
 for (var i = 2; i < 100; i++) {
-  var pizzasDiv = document.getElementById("randomPizzas");
   pizzasDiv.appendChild(pizzaElementGenerator(i));
 }
 

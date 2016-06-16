@@ -125,6 +125,9 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
 
   * Removed all adjectives from switch statement.
   * Removed all Nouns from switch statement.
+  * Cached variables outside of loop in makeRandomPizza.
+  * Cached the pizzaElementGenerator variables outside of a loop.
+  * Cached variable out of loop that creates and appends the pizza when screen loads. 
 
 * UpdatePositions method optimizations:
     * Changed to getElementsByClassName
