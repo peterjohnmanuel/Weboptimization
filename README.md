@@ -1,61 +1,32 @@
 ## Website Performance Optimization portfolio project
 
-Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
+Optimize code for the udacity project
 
-To get started, check out the repository and inspect the code.
+## Webserver
 
-### Getting started
+* IIS 
 
-####Part 1: Optimize PageSpeed Insights score for index.html
+## Instructions
 
-Some useful tips to help you get started:
+* Clone the web optimization project or download the .zip file from (github)[*]
+* Navigate to the dist folder and open the index.html to begin testing the application.
 
-1. Check out the repository
-1. To inspect the site on your phone, you can run a local server
+## Testing using a webserver.
 
-  ```bash
-  $> cd /path/to/your-project-folder
-  $> python -m SimpleHTTPServer 8080
-  ```
+* Download and install python for you operating system (make sure to install the python enviroment path).
+* Open cmd or terminal depending on the os and navigate to the project directory.
+* Enter : python -m SimpleHttpServer 8080[port]
+* Navigate to http://localhost:port
 
-1. Open a browser and visit localhost:8080
-1. Download and install [ngrok](https://ngrok.com/) to make your local server accessible remotely.
+## Testing the page score
 
-  ``` bash
-  $> cd /path/to/your-project-folder
-  $> ngrok http 8080
-  ```
-
-1. Copy the public URL ngrok gives you and try running it through PageSpeed Insights! Optional: [More on integrating ngrok, Grunt and PageSpeed.](http://www.jamescryer.com/2014/06/12/grunt-pagespeed-and-ngrok-locally-testing/)
-
-Profile, optimize, measure... and then lather, rinse, and repeat. Good luck!
-
-####Part 2: Optimize Frames per Second in pizza.html
-
-To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js. 
-
-You might find the FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
-
-### Optimization Tips and Tricks
-* [Optimizing Performance](https://developers.google.com/web/fundamentals/performance/ "web performance")
-* [Analyzing the Critical Rendering Path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/analyzing-crp.html "analyzing crp")
-* [Optimizing the Critical Rendering Path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/optimizing-critical-rendering-path.html "optimize the crp!")
-* [Avoiding Rendering Blocking CSS](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css.html "render blocking css")
-* [Optimizing JavaScript](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/adding-interactivity-with-javascript.html "javascript")
-* [Measuring with Navigation Timing](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/measure-crp.html "nav timing api"). We didn't cover the Navigation Timing API in the first two lessons but it's an incredibly useful tool for automated page profiling. I highly recommend reading.
-* <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/eliminate-downloads.html">The fewer the downloads, the better</a>
-* <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer.html">Reduce the size of text</a>
-* <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization.html">Optimize images</a>
-* <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching.html">HTTP caching</a>
-
-### Customization with Bootstrap
-The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstrap</a> framework. All custom styles are in `dist/css/portfolio.css` in the portfolio repo.
-
-* <a href="http://getbootstrap.com/css/">Bootstrap's CSS Classes</a>
-* <a href="http://getbootstrap.com/components/">Bootstrap's Components</a>
-
-
-
+* Download [ngrok](https://ngrok.com/)
+* Extract ngrok from the zip file.
+* Start ngrok.exe by double clicking the file (depending on os).
+* Enter ngrok http port.
+* This will provide a link where the site is temporaily hosted. 
+* Open a browser and go (google page speed insights)[https://developers.google.com/speed/pagespeed/insights/].
+* Click analyze and wait for the page speed score. 
 
 ### Changes Done:
 
@@ -136,7 +107,6 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
     * Added phase loop to populate the 5 phases.
     * Changed to translateX to enhance performance. 
 
-
 * changePizzaSizes method optimizations:
     * Change: Changed to Get Elements by class name.
     * Change: Removed dx from loop.
@@ -184,3 +154,12 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
 
 * [Using media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
 * [Learning Gulp #8 - LiveReload With Gulp](https://www.youtube.com/watch?v=r5fvdIa0ETk)
+* [Request animation frame](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame)
+* [Google Page Speed insights](https://developers.google.com/speed/pagespeed/insights/)
+* [Ngrok](https://ngrok.com/)
+* [Nodejs](https://nodejs.org/en/)
+* [Pagespeed Optimization](https://varvy.com/pagespeed/)
+* [Gulp](http://gulpjs.com/) 
+* [Python](https://www.python.org/)
+* [How to use SimpleHTTPServer](http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/)
+* [Online readme file editing](http://dillinger.io/)
