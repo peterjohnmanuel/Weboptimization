@@ -336,17 +336,17 @@ var ingredientItemizer = function (string) {
 };
 
 // Change: Cached variables outside of loop in makeRandomPizza.
-  var numberOfMeats = 0;
-  var numberOfNonMeats = 0; 
-  var numberOfCheeses = 0;
+var numberOfMeats = 0;
+var numberOfNonMeats = 0;
+var numberOfCheeses = 0;
 
 // Returns a string with random pizza ingredients nested inside <li> tags
 var makeRandomPizza = function () {
   var pizza = "";
 
-   numberOfMeats = Math.floor((Math.random() * 4));
-   numberOfNonMeats = Math.floor((Math.random() * 3));
-   numberOfCheeses = Math.floor((Math.random() * 2));
+  numberOfMeats = Math.floor((Math.random() * 4));
+  numberOfNonMeats = Math.floor((Math.random() * 3));
+  numberOfCheeses = Math.floor((Math.random() * 2));
 
   for (var i = 0; i < numberOfMeats; i++) {
     pizza = pizza + ingredientItemizer(selectRandomMeat());
@@ -554,16 +554,28 @@ window.addEventListener('scroll', updatePositions);
 
 // Generates the sliding pizzas when the page loads.
 document.addEventListener('DOMContentLoaded', function () {
-  var cols = 8;
   var s = 256;
-  for (var i = 0; i < 200; i++) {
-    var elem = document.createElement('img');
+
+  // Change: Cached elem variable. 
+  var elem;
+
+  // Change: Get rows from browser height.
+  var row = Math.ceil(window.innerHeight / (73.333 + 200));
+
+  // Change: Get columns from browser width.
+  var col = Math.ceil(window.innerWidth / (100 + 150));
+
+  // Change: Set number of pizza's with row's and col's
+  var pizzas = row * col;
+
+  for (var i = 0; i < pizzas; i++) {
+    elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
     elem.style.height = "100px";
     elem.style.width = "73.333px";
-    elem.basicLeft = (i % cols) * s;
-    elem.style.top = (Math.floor(i / cols) * s) + 'px';
+    elem.basicLeft = (i % col) * s;
+    elem.style.top = (Math.floor(i / col) * s) + 'px';
     document.querySelector("#movingPizzas1").appendChild(elem);
   }
   updatePositions();

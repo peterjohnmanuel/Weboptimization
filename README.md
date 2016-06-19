@@ -141,13 +141,18 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
     * Change: Changed to Get Elements by class name.
     * Change: Removed dx from loop.
     * Change: Removed dx from loop.
-    * Change: Removed selector in loop.     
+    * Change: Removed selector in loop.
+
+* Optimizations on the DOMContentLoaded method.
+
+    * Change: Cached elem variable. 
+    * Change: Get rows from browser height.
+    * Change: Get columns from browser width.
+    * Change: Set number of pizza's with row's and col's     
 
 #### views/css/style.css
 
 * Added backface visibility
-
-
 
 #### General Changes
 
