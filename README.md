@@ -8,7 +8,7 @@ Optimize code for the udacity project
 
 ## Instructions
 
-* Clone the web optimization project or download the .zip file from (github)[*]
+* Clone the web optimization project or download the .zip file from (github)[https://github.com/peterjohnmanuel/Weboptimization.git]
 * Navigate to the dist folder and open the index.html to begin testing the application.
 
 ## Testing using a webserver.
