@@ -28,7 +28,7 @@ Optimize code for the udacity project
 * Open a browser and go [google page speed insights](https://developers.google.com/speed/pagespeed/insights/).
 * Click analyze and wait for the page speed score. 
 
-### Changes Done:
+## Changes Done:
 
 #### Index.html
 
@@ -137,7 +137,7 @@ Optimize code for the udacity project
 * Installed and configured gulp rename.
 * Installed and configured gulp useref.
 
-### Gulp Modules Used
+## Gulp Modules Used
 
 * [Gulp Uglify](https://www.npmjs.com/package/gulp-uglify)
 * [Gulp Html Minifier](https://www.npmjs.com/package/gulp-html-minifier)
@@ -150,7 +150,7 @@ Optimize code for the udacity project
 * [Gulp Useref](https://www.npmjs.com/package/gulp-useref)
 
  
-### Links Used:
+## Links Used:
 
 * [Using media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
 * [Learning Gulp #8 - LiveReload With Gulp](https://www.youtube.com/watch?v=r5fvdIa0ETk)
