@@ -8,7 +8,7 @@ Optimize code for the udacity project
 
 ## Instructions
 
-* Clone the web optimization project or download the .zip file from (github)[https://github.com/peterjohnmanuel/Weboptimization.git]
+* Clone the web optimization project or download the .zip file from [github](https://github.com/peterjohnmanuel/Weboptimization.git)
 * Navigate to the dist folder and open the index.html to begin testing the application.
 
 ## Testing using a webserver.
@@ -25,7 +25,7 @@ Optimize code for the udacity project
 * Start ngrok.exe by double clicking the file (depending on os).
 * Enter ngrok http port.
 * This will provide a link where the site is temporaily hosted. 
-* Open a browser and go (google page speed insights)[https://developers.google.com/speed/pagespeed/insights/].
+* Open a browser and go [google page speed insights](https://developers.google.com/speed/pagespeed/insights/).
 * Click analyze and wait for the page speed score. 
 
 ### Changes Done:
